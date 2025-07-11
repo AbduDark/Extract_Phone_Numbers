@@ -1,0 +1,186 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFF8E7;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  color: #2E2E2E;
+}
+
+/* Apply glow to text elements */
+h1, h2, h3, h4, h5, h6, p, a, span, li, .navbar .logo, .navbar .nav-links a, .profile-info h3, .profile-info p, .footer {
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px rgba(255, 215, 0, 0.5); /* Soft gold glow */
+}
+
+/* Exclude glow for extracted numbers */
+.extracted-number, .extracted-number span, .extracted-number p {
+  text-shadow: none; /* Remove glow for numbers */
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #D4A017;
+  border-radius: 6px;
+  resize: vertical;
+  background-color: #FFFFFF;
+  text-shadow: none; /* No glow for textarea content */
+}
+
+button {
+  background: #FFD700;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  color: #2E2E2E;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-shadow: 0 0 5px #2E2E2E, 0 0 10px rgba(46, 46, 46, 0.5); /* Subtle glow for buttons */
+}
+button:hover {
+  background: #DAA520;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #FFD700;
+  color: #2E2E2E;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+.navbar .logo {
+  font-size: 20px;
+}
+.navbar .nav-links a {
+  margin: 0 10px;
+  color: #2E2E2E;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+  color: #DAA520;
+}
+.toggle-dark {
+  background-color: #2E2E2E;
+  color: #FFD700;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #FFD700, 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  background: #FFF8E7;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #D4A017;
+}
+
+/* Profile section (used in about.html) */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #FFD700;
+}
+.profile-info h3 {
+  margin: 0;
+  color: #2E2E2E;
+}
+.profile-info p {
+  margin: 5px 0;
+  color: #8B5A2B;
+}
+
+/* Social icons */
+.social-icons a {
+  margin-left: 10px;
+  color: #FFD700;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+  text-shadow: 0 0 5px #FFD700, 0 0 10px rgba(255, 215, 0, 0.5);
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #DAA520;
+}
+
+/* Footer */
+.footer {
+  background: #FFF8E7;
+  color: #2E2E2E;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 1px solid #D4A017;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Dark mode support */
+.dark-mode {
+  background-color: #2E2E2E;
+  color: #E0E0E0;
+}
+.dark-mode .navbar {
+  background: #DAA520;
+}
+.dark-mode .container,
+.dark-mode textarea,
+.dark-mode li {
+  background: #3C3C3C;
+  color: #E0E0E0;
+  border-color: #FFD700;
+}
+.dark-mode .footer {
+  background: #2E2E2E;
+  color: #E0E0E0;
+  border-top: 1px solid #FFD700;
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, 
+.dark-mode p, .dark-mode a, .dark-mode span, .dark-mode li, 
+.dark-mode .navbar .logo, .dark-mode .navbar .nav-links a, 
+.dark-mode .profile-info h3, .dark-mode .profile-info p, .dark-mode .footer {
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px rgba(255, 215, 0, 0.7); /* Brighter glow for dark mode */
+}
+.dark-mode .extracted-number, .dark-mode .extracted-number span, .dark-mode .extracted-number p {
+  text-shadow: none; /* No glow for numbers in dark mode */
+}

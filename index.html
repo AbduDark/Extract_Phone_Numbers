@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>📋 استخراج أرقام الهاتف</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ✅ هيدر احترافي -->
+  <header class="navbar">
+    <div class="logo">📋 أرقام الواتساب</div>
+    <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">حول</a>
+    </nav>
+    <button class="toggle-dark" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <!-- ✅ المحتوى الرئيسي -->
+  <div class="container">
+    <textarea id="inputText" placeholder="الصق هنا النص المنسوخ من واتساب..."></textarea><br>
+    <button onclick="extractNumbers()">📤 استخراج الأرقام</button>
+    <button onclick="copyNumbers()">📋 نسخ كل الأرقام</button>
+    <button onclick="downloadNumbers()">💾 حفظ كملف TXT</button>
+
+    <h3>📱 الأرقام المستخرجة:</h3>
+    <ul id="result"></ul>
+  </div>
+
+  <!-- ✅ فوتر احترافي -->
+  <footer class="footer">
+    <p>&copy; 2025 جميع الحقوق محفوظة لـ <strong>Sayed Hassan</strong> و <strong>DARK</strong></p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
