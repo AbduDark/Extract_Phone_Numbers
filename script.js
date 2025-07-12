@@ -1,4 +1,3 @@
-
 let extractedList = [];
 
 function extractNumbers() {
@@ -74,7 +73,12 @@ function clearAll() {
     extractedList = [];
 }
 
-// Fix for iPhone multi-line paste issue
+// ✅ الوضع الليلي
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
+// ✅ دعم لصق سطور متعددة على الآيفون
 document.addEventListener("DOMContentLoaded", () => {
     const inputText = document.getElementById("inputText");
     inputText.setAttribute("autocapitalize", "off");
