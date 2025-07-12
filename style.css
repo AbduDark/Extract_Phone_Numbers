@@ -8,14 +8,16 @@ body {
   color: #2E2E2E;
 }
 
-/* Apply glow to text elements */
+/* Apply glow to text elements with dark green */
 h1, h2, h3, h4, h5, h6, p, a, span, li, .navbar .logo, .navbar .nav-links a, .profile-info h3, .profile-info p, .footer {
-  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px rgba(255, 215, 0, 0.5); /* Soft gold glow */
+  color: #1B4D3E; /* Dark green for text */
+  text-shadow: 0 0 5px #3CB371, 0 0 10px #3CB371, 0 0 15px rgba(60, 179, 113, 0.5); /* Medium sea green glow */
 }
 
 /* Exclude glow for extracted numbers */
 .extracted-number, .extracted-number span, .extracted-number p {
-  text-shadow: none; /* Remove glow for numbers */
+  color: #2E2E2E; /* Dark charcoal for numbers */
+  text-shadow: none; /* No glow */
 }
 
 textarea {
@@ -24,27 +26,27 @@ textarea {
   font-size: 16px;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #D4A017;
+  border: 1px solid #1B4D3E; /* Dark green border */
   border-radius: 6px;
   resize: vertical;
   background-color: #FFFFFF;
-  text-shadow: none; /* No glow for textarea content */
+  text-shadow: none;
 }
 
 button {
-  background: #FFD700;
+  background: #1B4D3E; /* Dark green */
   border: none;
   padding: 10px 20px;
   margin: 5px;
   border-radius: 6px;
-  color: #2E2E2E;
+  color: #FFF8E7; /* Ivory text for contrast */
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s ease;
-  text-shadow: 0 0 5px #2E2E2E, 0 0 10px rgba(46, 46, 46, 0.5); /* Subtle glow for buttons */
+  text-shadow: 0 0 5px #2E2E2E, 0 0 10px rgba(46, 46, 46, 0.5);
 }
 button:hover {
-  background: #DAA520;
+  background: #2E8B57; /* Sea green for hover */
 }
 
 /* Navbar */
@@ -53,8 +55,8 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background: #FFD700;
-  color: #2E2E2E;
+  background: #1B4D3E; /* Dark green */
+  color: #FFF8E7; /* Ivory text */
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   flex-wrap: wrap;
@@ -64,22 +66,22 @@ button:hover {
 }
 .navbar .nav-links a {
   margin: 0 10px;
-  color: #2E2E2E;
+  color: #FFF8E7;
   text-decoration: none;
   font-weight: bold;
 }
 .navbar .nav-links a:hover {
   text-decoration: underline;
-  color: #DAA520;
+  color: #2E8B57; /* Sea green for hover */
 }
 .toggle-dark {
   background-color: #2E2E2E;
-  color: #FFD700;
+  color: #3CB371; /* Medium sea green for toggle */
   border: none;
   padding: 6px 12px;
   border-radius: 5px;
   cursor: pointer;
-  text-shadow: 0 0 5px #FFD700, 0 0 10px rgba(255, 215, 0, 0.5);
+  text-shadow: 0 0 5px #3CB371, 0 0 10px rgba(60, 179, 113, 0.5);
 }
 
 /* Container */
@@ -102,7 +104,7 @@ li {
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
-  border: 1px solid #D4A017;
+  border: 1px solid #1B4D3E; /* Dark green border */
 }
 
 /* Profile section (used in about.html) */
@@ -117,29 +119,29 @@ li {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 3px solid #FFD700;
+  border: 3px solid #1B4D3E; /* Dark green border */
 }
 .profile-info h3 {
   margin: 0;
-  color: #2E2E2E;
+  color: #1B4D3E;
 }
 .profile-info p {
   margin: 5px 0;
-  color: #8B5A2B;
+  color: #556B2F; /* Olive green for secondary text */
 }
 
 /* Social icons */
 .social-icons a {
   margin-left: 10px;
-  color: #FFD700;
+  color: #1B4D3E; /* Dark green */
   font-size: 20px;
   text-decoration: none;
   transition: transform 0.2s ease, color 0.2s ease;
-  text-shadow: 0 0 5px #FFD700, 0 0 10px rgba(255, 215, 0, 0.5);
+  text-shadow: 0 0 5px #3CB371, 0 0 10px rgba(60, 179, 113, 0.5);
 }
 .social-icons a:hover {
   transform: scale(1.2);
-  color: #DAA520;
+  color: #2E8B57; /* Sea green for hover */
 }
 
 /* Footer */
@@ -149,7 +151,7 @@ li {
   text-align: center;
   padding: 20px 10px;
   margin-top: 40px;
-  border-top: 1px solid #D4A017;
+  border-top: 1px solid #1B4D3E; /* Dark green border */
   position: relative;
   bottom: 0;
   width: 100%;
@@ -161,26 +163,28 @@ li {
   color: #E0E0E0;
 }
 .dark-mode .navbar {
-  background: #DAA520;
+  background: #2E8B57; /* Sea green for navbar */
 }
 .dark-mode .container,
 .dark-mode textarea,
 .dark-mode li {
   background: #3C3C3C;
   color: #E0E0E0;
-  border-color: #FFD700;
+  border-color: #1B4D3E;
 }
 .dark-mode .footer {
   background: #2E2E2E;
   color: #E0E0E0;
-  border-top: 1px solid #FFD700;
+  border-top: 1px solid #1B4D3E;
 }
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, 
 .dark-mode p, .dark-mode a, .dark-mode span, .dark-mode li, 
 .dark-mode .navbar .logo, .dark-mode .navbar .nav-links a, 
 .dark-mode .profile-info h3, .dark-mode .profile-info p, .dark-mode .footer {
-  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px rgba(255, 215, 0, 0.7); /* Brighter glow for dark mode */
+  color: #1B4D3E; /* Dark green */
+  text-shadow: 0 0 5px #3CB371, 0 0 10px #3CB371, 0 0 15px rgba(60, 179, 113, 0.7);
 }
 .dark-mode .extracted-number, .dark-mode .extracted-number span, .dark-mode .extracted-number p {
-  text-shadow: none; /* No glow for numbers in dark mode */
+  color: #E0E0E0;
+  text-shadow: none;
 }

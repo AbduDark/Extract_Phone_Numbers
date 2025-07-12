@@ -1,7 +1,9 @@
+
 let extractedList = [];
 
 function extractNumbers() {
-    const text = document.getElementById("inputText").value;
+    const textArea = document.getElementById("inputText");
+    const text = textArea.value;
     const regex = /(?:\+?2)?01\d{9}/g;
     const matches = text.match(regex) || [];
     const resultList = document.getElementById("result");
@@ -65,6 +67,24 @@ function downloadNumbers() {
     link.click();
     document.body.removeChild(link);
 }
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
+
+function clearAll() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("result").innerHTML = "";
+    extractedList = [];
 }
+
+// Fix for iPhone multi-line paste issue
+document.addEventListener("DOMContentLoaded", () => {
+    const inputText = document.getElementById("inputText");
+    inputText.setAttribute("autocapitalize", "off");
+    inputText.setAttribute("autocorrect", "off");
+    inputText.setAttribute("spellcheck", "false");
+
+    inputText.addEventListener("paste", function (e) {
+        e.preventDefault();
+        const text = (e.clipboardData || window.clipboardData).getData("text");
+        const processed = text.replace(/\r/g, "");
+        document.execCommand("insertText", false, processed);
+    });
+});
